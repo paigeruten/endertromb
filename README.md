@@ -4,7 +4,7 @@
 
 "Endertromb" is the name of a planet that runs on Ruby, from [Why's (Poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide). On this planet, the flowers, apple blossoms, and sky are all low-resolution projections. The planet has both wish-granting and mind-reading capabilities, and the heroes of the story use Ruby to put these two things together, which allows them to conjure a floating whale to pursue The Originals back to Earth. So yeah, it's a perfectly appropriate name for this project.
 
-And in the spirit of Why, this project's main gaol is education. There are a lot of possibilities here:
+And in the spirit of Why, this project's main goal is education. There are a lot of possibilities here:
 
 * In-game lessons, à la [Try Ruby](http://tryruby.org) (but with much more exciting output)
 * A game or map in Minecraft where you have to using programming skills to solve problems or just to help along the way (à la [CodeSpells](https://sites.google.com/a/eng.ucsd.edu/codespells))
