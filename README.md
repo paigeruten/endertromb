@@ -7,7 +7,7 @@
 And in the spirit of Why, this project's main goal is education. There are a lot of possibilities here:
 
 * In-game lessons, à la [Try Ruby](http://tryruby.org) (but with much more exciting output)
-* A game or map in Minecraft where you have to using programming skills to solve problems or just to help along the way (à la [CodeSpells](https://sites.google.com/a/eng.ucsd.edu/codespells))
+* A game or map in Minecraft where you have to use programming skills to solve problems or just help you along the way (à la [CodeSpells](https://sites.google.com/a/eng.ucsd.edu/codespells))
 * An easy way of making your own Minecraft mods using the same Ruby API that is provided in-game
 
 For now, it will be simply a toy that you can mess around with, as I build up the API and work out some kinks.
@@ -18,7 +18,7 @@ At the moment, you basically need to set up a development environment to play th
 
 If you want to try it out now, though, here are the instructions:
 
-1. Get MCP 7.44 for Minecraft 1.5.1 from [here](http://mcp.ocean-labs.de/index.php/MCP_Releases#Releases)
+1. Get MCP 7.44 for Minecraft 1.5.1 from [here](http://mcp.ocean-labs.de/index.php/MCP_Releases#Releases).
 2. Unzip it, follow the instructions in `mcp744/docs/README-MCP.TXT`. Basically, first run `updatemcp.sh` or `updatemcp.bat`. Then download `server_minecraft.jar` from [here](https://minecraft.net/download) and put it into the `jars` folder, also copy your `bin` and `resources` folders from your Minecraft installation to the `jars` folder (make sure you're on Minecraft 1.5.1 and you probably shouldn't have any mods installed). Then run `decompile.sh` or `decompile.bat`. It'll take a little while.
 3. Copy the `endertromb` folder in this repository into the `lib` folder of MCP.
 4. Download JRuby from [here](http://www.jruby.org/download), get the "Complete .jar". Rename it `jruby.jar`, and put it in the `lib` folder of MCP.
@@ -41,7 +41,7 @@ Now loop through them, making each animal mount the next one in the array:
 
 ![Screenshot of animal totem pole.](http://viewsourcecode.org/images/endertromb/2.png)
 
-Unfortunately, in between spawning the animals and making them into a totem pole, the wolf ate the sheep, and so the resulting totem pole got got short a little. Oh well.
+Unfortunately, in between spawning the animals and making them into a totem pole, the wolf ate the sheep, and so the resulting totem pole got cut short a little. Oh well.
 
 ## Usage
 
