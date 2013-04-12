@@ -1,6 +1,6 @@
 # Endertromb
 
-`Endertromb` is a [Minecraft](http://minecraft.net) mod that gives you an in-game [Ruby](http://ruby-lang.org) prompt. It allows you to conjure and control the various entities and blocks in the Minecraft world. For example, `pig = Pig.new` spawns a pig right before your eyes, and then `pig.jump` makes it jump. Endertromb" is a [Why's (Poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide) reference, in which a quaint planet called Endertromb runs on Ruby, and the heroes of the story leverage the planet's `MindReader` and `WishMaker` classes 
+`Endertromb` is a [Minecraft](http://minecraft.net) mod that gives you an in-game [Ruby](http://ruby-lang.org) prompt. It allows you to conjure and control the various entities and blocks in the Minecraft world. For example, `pig = Pig.new` spawns a pig right before your eyes, and then `pig.jump` makes it jump.
 
 "Endertromb" is the name of a planet that runs on Ruby, from [Why's (Poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide). On this planet, the flowers, apple blossoms, and sky are all low-resolution projections. The planet has both wish-granting and mind-reading capabilities, and the heroes of the story use Ruby to put these two things together, which allows them to conjure a floating whale to pursue The Originals back to Earth. So yeah, it's a perfectly appropriate name for this project.
 
