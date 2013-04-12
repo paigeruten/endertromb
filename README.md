@@ -27,6 +27,8 @@ If you want to try it out now, though, here are the instructions:
 7. Run `recompile.sh` or `recompile.bat` and hope it works. There may be an error that comes up that says a certain function isn't returning a value. I fixed that by going to the function and just making it `return true;`. Seems to work. After fixing the error, you'll have to run the recompile script again.
 8. Run `startclient.sh` or `startclient.bat` and Minecraft should run, and you should be able to use the `/ruby` command.
 
+**Warning:** Please don't run this in multiplayer unless you know it's safe. I don't know enough about Minecraft yet to know if this is a problem, but if someone could join your game and run the `/ruby` command, they may or may not be able to execute arbitrary Ruby code on your computer, which means they could do whatever they want with your computer. So I would stay away from multiplayer for now.
+
 ## Example
 
 Let's make a totem pole of animals. First, make an array of animals:
