@@ -1,6 +1,7 @@
 $:.unshift File.dirname(__FILE__)
 
 require "endertromb/entity"
+require "endertromb/animal_array"
 
 require "endertromb/arrow"
 require "endertromb/bat"

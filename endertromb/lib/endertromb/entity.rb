@@ -9,16 +9,21 @@ module Endertromb
       $world.spawn_entity_in_world(@entity)
     end
 
+    def <=>(other)
+      @entity.width*@entity.height <=> other.entity.width*other.entity.height
+    end
+
     def mount(other)
       @entity.mount_entity(other.entity)
     end
     alias_method :/, :mount
 
-    def unmount(other)
+    def unmount
       if riding?
+        riding_entity = @entity.ridingEntity
         @entity.ridingEntity.riddenByEntity = nil
         @entity.ridingEntity = nil
-        @entity.unmount_entity(other.entity)
+        @entity.unmount_entity(riding_entity)
       end
     end
 
