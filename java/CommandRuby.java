@@ -34,7 +34,7 @@ public class CommandRuby extends CommandBase
         this.container.put("$world", world);
 
         String script = CommandRuby.joinArgs(par2ArrayOfStr);
-        String output = this.container.runScriptlet("(" + script + ").inspect").toString();
+        String output = this.container.runScriptlet("begin; (" + script + ").inspect; rescue Exception => e; \"Error: #{e}\"; end").toString();
         par1ICommandSender.sendChatToPlayer("> " + script + "\n= " + output);
     }
     
