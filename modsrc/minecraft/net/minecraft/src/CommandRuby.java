@@ -17,9 +17,6 @@ public class CommandRuby extends CommandBase
         return "ruby";
     }
 
-    /**
-     * Return the required permission level for this command.
-     */
     public int getRequiredPermissionLevel()
     {
         return 0;
@@ -35,7 +32,7 @@ public class CommandRuby extends CommandBase
 
         String script = CommandRuby.joinArgs(par2ArrayOfStr);
         String output = this.container.runScriptlet("begin; (" + script + ").inspect; rescue Exception => e; \"Error: #{e}\"; end").toString();
-        par1ICommandSender.sendChatToPlayer("> " + script + "\n= " + output);
+        par1ICommandSender.sendChatToPlayer("ruby> " + script + "\n= " + output);
     }
     
     static private String joinArgs(String[] args) {
