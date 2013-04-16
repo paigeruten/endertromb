@@ -35,7 +35,7 @@ public class GuiChat extends GuiScreen
     // Endertromb start
     private boolean rubyMode = false;
     private String prompt = "ruby> ";
-    private int promptColor = 0xc00000;
+    private int promptColor = 0xaa0000;
     // Endertromb end
 
     public GuiChat() {}
@@ -137,7 +137,13 @@ public class GuiChat extends GuiScreen
                 }
             }
 
-            this.mc.displayGuiScreen((GuiScreen)null);
+            // Endertromb start
+            if (this.rubyMode) {
+                this.inputField.setText("");
+            } else {
+                this.mc.displayGuiScreen((GuiScreen)null);
+            }
+            // Endertromb end
         }
         else if (par2 == 200)
         {

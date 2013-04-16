@@ -48,7 +48,7 @@ Unfortunately, in between spawning the animals and making them into a totem pole
 
 Create a new world with cheats enabled. (For now, you need to have permission to run the `/ruby` command in order to execute Ruby code, even from the special prompt.)
 
-Press `r` to open the Ruby prompt. Type in some Ruby code, and the result will be printed in the chat.
+Press `r` to open the Ruby prompt. Type in some Ruby code, and the result will be printed in the chat. The prompt will stay open even after pressing enter, ready for you to type some more. Press escape to close the prompt.
 
 ## Bugs
 
@@ -59,8 +59,6 @@ Press `r` to open the Ruby prompt. Type in some Ruby code, and the result will b
 * Make it into an actual Minecraft mod that people can actually install easily
 * Flesh out the API
 * Better prompt:
-  * Use `_` variable to refer to the result of the last evaluation
-  * Use different colours for different prompts, and for error messages
   * Friendly error messages, maybe steal Hackety Hack's
   * Continued lines
 

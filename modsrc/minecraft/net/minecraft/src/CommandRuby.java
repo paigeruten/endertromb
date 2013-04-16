@@ -1,3 +1,4 @@
+// Endertromb start
 package net.minecraft.src;
 
 import org.jruby.embed.ScriptingContainer;
@@ -8,8 +9,8 @@ public class CommandRuby extends CommandBase
     private ScriptingContainer container;
 
     public CommandRuby() {
-      this.container = new ScriptingContainer(LocalVariableBehavior.PERSISTENT);
-      this.container.runScriptlet("require 'endertromb/lib/endertromb'; include Endertromb");
+        this.container = new ScriptingContainer(LocalVariableBehavior.PERSISTENT);
+        this.container.runScriptlet("require 'endertromb/lib/endertromb'; include Endertromb");
     }
 
     public String getCommandName()
@@ -22,17 +23,22 @@ public class CommandRuby extends CommandBase
         return 0;
     }
 
-    public void processCommand(ICommandSender par1ICommandSender, String[] par2ArrayOfStr)
+    public void processCommand(ICommandSender commandSender, String[] args)
     {
-        EntityPlayerMP player = getCommandSenderAsPlayer(par1ICommandSender);
+        EntityPlayerMP player = getCommandSenderAsPlayer(commandSender);
         World world = player.worldObj;
 
         this.container.put("$player", player);
         this.container.put("$world", world);
 
-        String script = CommandRuby.joinArgs(par2ArrayOfStr);
-        String output = this.container.runScriptlet("begin; (" + script + ").inspect; rescue Exception => e; \"Error: #{e}\"; end").toString();
-        par1ICommandSender.sendChatToPlayer("ruby> " + script + "\n= " + output);
+        String script = CommandRuby.joinArgs(args);
+        String output = this.container.runScriptlet("begin; (_ = (" + script + ")).inspect; rescue Exception => e; \"Error: #{e}\"; end").toString();
+        commandSender.sendChatToPlayer("\u00A74ruby> \u00A7f" + script);
+        if (output.startsWith("Error: ")) {
+            commandSender.sendChatToPlayer("\u00A7c" + output);
+        } else {
+            commandSender.sendChatToPlayer("\u00A76= \u00A7b" + output);
+        }
     }
     
     static private String joinArgs(String[] args) {
@@ -40,8 +46,10 @@ public class CommandRuby extends CommandBase
         StringBuilder sb = new StringBuilder();
         int i;
         for (i = 0; i < args.length - 1; i++) {
-          sb.append(args[i] + " ");
+            sb.append(args[i] + " ");
         }
         return sb.toString() + args[i];
     }
 }
+// Endertromb end
+
