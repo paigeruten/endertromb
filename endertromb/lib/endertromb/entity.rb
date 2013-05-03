@@ -23,17 +23,13 @@ module Endertromb
     end
 
     def mount(other)
-      @entity.mount_entity(other.entity)
+      other = other.entity unless other.nil?
+      @entity.mount_entity(other)
     end
     alias_method :/, :mount
 
     def unmount
-      if riding?
-        riding_entity = @entity.ridingEntity
-        @entity.ridingEntity.riddenByEntity = nil
-        @entity.ridingEntity = nil
-        @entity.unmount_entity(riding_entity)
-      end
+      mount(nil)
     end
 
     def move_to(*args)
@@ -76,10 +72,6 @@ module Endertromb
 
     def kill
       @entity.kill
-    end
-
-    def jump(velocity = 5)
-      @entity.add_velocity(0, velocity, 0)
     end
 
     def to_s
