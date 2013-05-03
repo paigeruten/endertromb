@@ -5,8 +5,17 @@ module Endertromb
     def initialize
       klass = "Entity#{self.class.to_s.sub(/^Endertromb::/, '')}".to_sym
       @entity = Java::NetMinecraftSrc.const_get(klass).new($world)
-      @entity.set_position($player.posX, $player.posY, $player.posZ)
+      place_in_front_of_player
       $world.spawn_entity_in_world(@entity)
+    end
+
+    def place_in_front_of_player
+      dir_x = net.minecraft.src.MathHelper.sin($player.rotationYaw * Math::PI / 180)
+      dir_z = net.minecraft.src.MathHelper.cos($player.rotationYaw * Math::PI / 180)
+      x = $player.posX + dir_x * -5
+      y = $player.posY
+      z = $player.posZ + dir_z * 5
+      @entity.set_position(x, y, z)
     end
 
     def <=>(other)
