@@ -1,0 +1,23 @@
+{
+  "folders":
+  [
+    {
+      "path": "./"
+    },
+    {
+      "path": "endertromb",
+      "name": "Endertromb (Ruby)"
+    },
+    {
+      "path": "mcp",
+      "name": "MCP"
+    },
+    {
+      "path": "mcp/src/minecraft",
+      "name": "Minecraft Source"
+    }
+  ],
+  "settings":
+  {
+  }
+}

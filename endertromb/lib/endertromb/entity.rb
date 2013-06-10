@@ -3,10 +3,19 @@ module Endertromb
     attr_reader :entity
 
     def initialize
+      cost = self.class.cost
       klass = "Entity#{self.class.to_s.sub(/^Endertromb::/, '')}".to_sym
-      @entity = Java::NetMinecraftSrc.const_get(klass).new($world)
-      place_in_front_of_player
-      $world.spawn_entity_in_world(@entity)
+      if cost.nil? || Inventory.remove_items(cost)
+        @entity = Java::NetMinecraftSrc.const_get(klass).new($world)
+        place_in_front_of_player
+        $world.spawn_entity_in_world(@entity)
+      else
+        raise "You need #{cost.count} #{cost.to_item_or_block.name} to make a #{self.class.to_s.sub(/^Endertromb::/, '')}"
+      end
+    end
+
+    def cost
+      nil
     end
 
     def place_in_front_of_player

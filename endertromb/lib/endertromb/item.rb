@@ -182,6 +182,10 @@ module Endertromb
       end
     end
 
+    def item_id
+      item.itemID
+    end
+
     def to_item_or_block
       self
     end

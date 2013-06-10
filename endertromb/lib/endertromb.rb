@@ -1,10 +1,15 @@
 $:.unshift File.dirname(__FILE__)
 
+def net
+  Java::Net
+end
+
 require "endertromb/animal_array"
 require "endertromb/crafting"
 require "endertromb/item"
 require "endertromb/block"
 require "endertromb/item_stack"
+require "endertromb/inventory"
 
 require "endertromb/core_ext/string"
 require "endertromb/core_ext/symbol"
@@ -71,10 +76,6 @@ require "endertromb/entities/wither_skull"
 require "endertromb/entities/wolf"
 require "endertromb/entities/xp_orb"
 require "endertromb/entities/zombie"
-
-def net
-  Java::Net
-end
 
 module Endertromb
 end
